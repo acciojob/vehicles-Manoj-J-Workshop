@@ -21,10 +21,11 @@ public class F1 extends Car {
          * speed more than 250: gear 6
          */
 
-        if(newSpeed == 0) {
+        if(newSpeed <= 0) {
             //Stop the car, set gear as 1
             stop();
             changeGear(1);
+            setCurrentSpeed(0);
             
         }
         //for all other cases, change the gear accordingly
